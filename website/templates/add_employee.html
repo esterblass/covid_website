@@ -1,0 +1,205 @@
+{% extends "base.html" %} {% block title %}add employee{% endblock %} {% block
+content %}
+<form method="POST">
+  <h3 align="center">הוסף עובד</h3>
+
+  <div class="form-group">
+    <label for="firstName">שם פרטי</label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstName"
+      name="firstName"
+      placeholder="הכנס שם פרטי"
+    />
+  </div>
+  <div class="form-group">
+    <label for="lastName">שם משפחה</label>
+    <input
+      type="text"
+      class="form-control"
+      id="lastName"
+      name="lastName"
+      placeholder="הכנס שם משפחה"
+    />
+  </div>
+  <div class="form-group">
+    <label for="idNumber">מספר זהות</label>
+    <input
+      type="text"
+      class="form-control"
+      id="idNumber"
+      name="idNumber"
+      placeholder="הכנס מספר זהות"
+    />
+  </div>
+  <div class="form-group">
+    <label for="addressCity">עיר</label>
+    <input
+      type="text"
+      class="form-control"
+      id="addressCity"
+      name="addressCity"
+      placeholder="הכנס עיר"
+    />
+  </div>
+  <div class="form-group">
+    <label for="addressStreet">רחוב</label>
+    <input
+      type="text"
+      class="form-control"
+      id="addressStreet"
+      name="addressStreet"
+      placeholder="הכנס רחוב"
+    />
+  </div>
+  <div class="form-group">
+    <label for="addressNumber">מספר בית</label>
+    <input
+      type="text"
+      class="form-control"
+      id="addressNumber"
+      name="addressNumber"
+      placeholder="הכנס מספר בית"
+    />
+  </div>
+  <div class="form-group">
+    <label for="birthDate">תאריך לידה</label>
+    <input
+      type="date"
+      class="form-control"
+      id="birthDate"
+      name="birthDate"
+      placeholder="הכנס תאריך לידה"
+    />
+  </div>
+  <div class="form-group">
+    <label for="phoneNumber">מספר טלפון</label>
+    <input
+      type="text"
+      class="form-control"
+      id="phoneNumber"
+      name="phoneNumber"
+      placeholder="הכנס מספר טלפון"
+    />
+  </div>
+  <div class="form-group">
+    <label for="mobileNumber">טלפון נייד</label>
+    <input
+      type="text"
+      class="form-control"
+      id="mobileNumber"
+      name="mobileNumber"
+      placeholder="הכנס טלפון נייד"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="vaccine1Date">תאריך חיסון 1</label>
+    <input
+      type="date"
+      class="form-control"
+      id="vaccine1Date"
+      name="vaccine1Date"
+      placeholder="הכנס תאריך חיסון 1"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vaccine1Manufacturer">יצרן חיסון 1</label>
+    <input
+      type="text"
+      class="form-control"
+      id="vaccine1Manufacturer"
+      name="vaccine1Manufacturer"
+      placeholder="הכנס יצרן חיסון 1"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vaccine2Date">תאריך חיסון 2</label>
+    <input
+      type="date"
+      class="form-control"
+      id="vaccine2Date"
+      name="vaccine2Date"
+      placeholder="הכנס תאריך חיסון 2"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vaccine2Manufacturer">יצרן חיסון 2</label>
+    <input
+      type="text"
+      class="form-control"
+      id="vaccine2Manufacturer"
+      name="vaccine2Manufacturer"
+      placeholder="הכנס יצרן חיסון 2"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vaccine3Date">תאריך חיסון 3</label>
+    <input
+      type="date"
+      class="form-control"
+      id="vaccine3Date"
+      name="vaccine3Date"
+      placeholder="הכנס תאריך חיסון 3"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vaccine3Manufacturer">יצרן חיסון 3</label>
+    <input
+      type="text"
+      class="form-control"
+      id="vaccine3Manufacturer"
+      name="vaccine3Manufacturer"
+      placeholder="הכנס יצרן חיסון 3"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vaccine4Date">תאריך חיסון 4</label>
+    <input
+      type="date"
+      class="form-control"
+      id="vaccine4Date"
+      name="vaccine4Date"
+      placeholder="Enter Vaccine 4 Date"
+    />
+  </div>
+  <div class="form-group">
+    <label for="vaccine4Manufacturer">יצרן חיסון 4</label>
+    <input
+      type="text"
+      class="form-control"
+      id="vaccine4Manufacturer"
+      name="vaccine4Manufacturer"
+      placeholder="הכנס יצרן חיסון 4"
+    />
+  </div>
+  <div class="form-group">
+    <label for="positiveResultDate">תאריך תוצאה חיובית</label>
+    <input
+      type="date"
+      class="form-control"
+      id="positiveResultDate"
+      name="positiveResultDate"
+      placeholder="הכנס תאריך תוצאה חיובית"
+    />
+  </div>
+  <div class="form-group">
+    <label for="recoveryDate">תאריך החלמה</label>
+    <input
+      type="date"
+      class="form-control"
+      id="recoveryDate"
+      name="recoveryDate"
+      placeholder="הכנס תאריך החלמה"
+    />
+  </div>
+
+  <br />
+<!--  <form action="upload.php" method="post" enctype="multipart/form-data">-->
+<!--  <label for="fileInput">בחר תמונה להעלאה:</label>-->
+<!--  <input type="file" id="fileInput" name="fileInput">-->
+<!--</form>-->
+  <button type="add" class="btn btn-primary">הוסף</button>
+</form>
+{% endblock %}

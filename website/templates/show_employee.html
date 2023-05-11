@@ -1,0 +1,73 @@
+{% extends "base.html" %} {% block title %}show employee{% endblock %} {% block
+content %}
+  <h3 align="center">:כל העובדים</h3>
+
+<head>
+    <title>All Employees</title>
+</head>
+<table style="table-layout: fixed; width: auto; text-align:center"  border="1">
+
+    <thead>
+    <tr>
+        <th>קוד</th>
+        <th>שם פרטי</th>
+        <th> משפחה</th>
+        <th>מספר זהות</th>
+        <th>עיר</th>
+        <th>רחוב</th>
+        <th>מספר</th>
+
+        <th>תאריך לידה</th>
+        <th>טלפון</th>
+        <th>נייד</th>
+        <th>חיסונים</th>
+        <!--        <th>יצרן חיסון 1</th>-->
+        <!--        <th>תאריך חיסון 2</th>-->
+        <!--        <th>יצרן חיסון 2</th>-->
+        <!--        <th>תאריך חיסון 3</th>-->
+        <!--        <th>יצרן חיסון 3</th>-->
+        <!--        <th>תאריך חיסון 4</th>-->
+        <!--        <th>יצרן חיסון 4</th>-->
+        <th>תאריך תוצאה חיובית</th>
+        <th>תאריך החלמה</th>
+
+
+    </tr>
+    </thead>
+
+    <li class="list-group-item">
+
+        {% for employee, covid in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.first_name }}</td>
+            <td>{{ employee.last_name }}</td>
+            <td>{{ employee.id_number }}</td>
+            <td>{{ employee.address_city }}</td>
+            <td>{{ employee.address_street }}</td>
+            <td>{{ employee.address_number}}</td>
+
+            <td>{{ employee.birth_date }}</td>
+            <td>{{ employee.phone_number }}</td>
+            <td>{{ employee.mobile_number }}</td>
+            <td>
+                {% for vaccine in vaccines %}
+                {% if vaccine.employee_id == employee.id %}
+    <li>{{ vaccine.vaccine_manufacturer }} - {{ vaccine.vaccine_date }}</li>
+    {% endif %}
+    {% endfor %}
+    </td>
+
+    <td>{{ covid.positive_result_date }}</td>
+    <td>{{ covid.recovery_date }}</td>
+
+
+    </tr>
+    {% endfor %}
+
+</table>
+ <h3 align="center">מספר העובדים שלא התחסנו בכלל:</h3>
+<h3 align="center">{{count_not_vaccine}}</h3>
+{% endblock %}
+
+
